@@ -63,34 +63,35 @@ obtain_fishhook() {
   fi
 }
 
-# Download the OCHamcrest IOS framework and rename the files to
-# remove the 'IOS' moniker from it.
+## Download the OCHamcrest IOS framework and rename the files to
+## remove the 'IOS' moniker from it.
 obtain_ochamcrest() {
   # Set the current release number for OCHamcrest.
   readonly OCHAMCREST_VERSION="OCHamcrest-5.0.0"
   # URL for OCHamcrest to be downloaded from.
-  readonly OCHAMCREST_URL="https://github.com/hamcrest/OCHamcrest/releases/download/v5.0.0/${OCHAMCREST_VERSION}.zip"
+#  readonly OCHAMCREST_URL="https://github.com/hamcrest/OCHamcrest/releases/download/v5.0.0/${OCHAMCREST_VERSION}.zip"
 
   echo "Obtaining the OCHamcrest dependency."
 
-  # Check if the required OCHamcrest.framework exists or not.
+#  # Check if the required OCHamcrest.framework exists or not.
   if [[ -d "${EARLGREY_DIR}/OCHamcrest.framework" ]]; then
     echo "The required OCHamcrest.framework directory already exists at" \
     "$EARLGREY_DIR/OCHamcrest.framework. If you experience issues with running" \
     "EarlGrey then please remove this directory and run this script" \
     "again."
   else
-    # Download the OCHamcrestIOS framework into the EarlGrey/ directory.
-    err_str="There was an error downloading OCHamcrest."
-    err_str+="Please check if you are having problems with your connection."
-    run_command err_str curl -LOk ${OCHAMCREST_URL}
+#    # Download the OCHamcrestIOS framework into the EarlGrey/ directory.
+#    err_str="There was an error downloading OCHamcrest."
+#    err_str+="Please check if you are having problems with your connection."
+#    run_command err_str curl -LOk ${OCHAMCREST_URL}
+#
+#    if [[ ! -f "${OCHAMCREST_VERSION}.zip" ]]; then
+#      echo "The required $OCHAMCREST_VERSION Framework was not cloned" \
+#      "correctly. Try downloading OCHamcrestIOS.framework to the EarlGrey" \
+#      "folder manually and then run ./rename-ochamcrestIOS.py" >&2
+#      exit 1
+#    fi
 
-    if [[ ! -f "${OCHAMCREST_VERSION}.zip" ]]; then
-      echo "The required $OCHAMCREST_VERSION Framework was not cloned" \
-      "correctly. Try downloading OCHamcrestIOS.framework to the EarlGrey" \
-      "folder manually and then run ./rename-ochamcrestIOS.py" >&2
-      exit 1
-    fi
 
     # Unzip the archive, and move the OCHamcrestIOS framework to the
     # EarlGrey/ directory, deleting the zip archive in the process.

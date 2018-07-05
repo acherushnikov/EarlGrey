@@ -16,7 +16,10 @@
 
 #import "Core/GREYAutomationSetup.h"
 
+#if (TARGET_OS_SIMULATOR)
 #import <XCTest/XCTest.h>
+#endif
+
 #include <dlfcn.h>
 #include <execinfo.h>
 #include <objc/runtime.h>
@@ -26,6 +29,9 @@
 #import "Common/GREYDefines.h"
 #import "Common/GREYFatalAsserts.h"
 #import "Common/GREYSwizzler.h"
+
+#import "Crutch.h"
+
 
 // Exception handler that was previously installed before we replaced it with our own.
 static NSUncaughtExceptionHandler *gPreviousUncaughtExceptionHandler;
