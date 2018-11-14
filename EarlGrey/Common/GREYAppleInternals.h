@@ -378,7 +378,7 @@ IOHIDEventRef IOHIDEventCreateDigitizerFingerEvent(CFAllocatorRef allocator,
  *
  *  @return ignored.
  */
-- (bool)loadAccessibility:(void **)unused;
+- (bool)_loadAccessibility:(void **)unused;
 
 @end
 
