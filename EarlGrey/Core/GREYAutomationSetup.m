@@ -27,10 +27,6 @@
 #import "Common/GREYFatalAsserts.h"
 #import "Common/GREYSwizzler.h"
 
-#if __ARM_ARCH_7__
-
-#endif
-
 // Exception handler that was previously installed before we replaced it with our own.
 static NSUncaughtExceptionHandler *gPreviousUncaughtExceptionHandler;
 
