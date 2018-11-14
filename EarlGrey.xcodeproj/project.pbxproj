@@ -101,8 +101,9 @@
 		7CFDF8EB1DBBD5FC00CAADB3 /* GREYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDF8E51DBBD5FC00CAADB3 /* GREYLogger.m */; };
 		7CFDF8EC1DBBD5FC00CAADB3 /* GREYObjectFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CFDF8E61DBBD5FC00CAADB3 /* GREYObjectFormatter.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7CFDF8ED1DBBD5FC00CAADB3 /* GREYObjectFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDF8E71DBBD5FC00CAADB3 /* GREYObjectFormatter.m */; };
-		B60E68D620D7A7BD00F22F12 /* Crutch.h in Headers */ = {isa = PBXBuildFile; fileRef = B60E68D420D7A7BD00F22F12 /* Crutch.h */; };
-		B60E68D720D7A7BD00F22F12 /* Crutch.m in Sources */ = {isa = PBXBuildFile; fileRef = B60E68D520D7A7BD00F22F12 /* Crutch.m */; };
+		B60E68D620D7A7BD00F22F12 /* XCUIDevice+Crutch.h in Headers */ = {isa = PBXBuildFile; fileRef = B60E68D420D7A7BD00F22F12 /* XCUIDevice+Crutch.h */; };
+		B60E68D720D7A7BD00F22F12 /* XCUIDevice+Crutch.m in Sources */ = {isa = PBXBuildFile; fileRef = B60E68D520D7A7BD00F22F12 /* XCUIDevice+Crutch.m */; };
+		B60E68D920D7AA7900F22F12 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60E68D820D7AA7900F22F12 /* XCTest.framework */; };
 		D210ED8D1E6F47D100978B9E /* GREYMultiFingerSwipeAction.h in Headers */ = {isa = PBXBuildFile; fileRef = D210ED8B1E6F47D100978B9E /* GREYMultiFingerSwipeAction.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D210ED8E1E6F47D100978B9E /* GREYMultiFingerSwipeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D210ED8C1E6F47D100978B9E /* GREYMultiFingerSwipeAction.m */; };
 		FD1001B01C5B46C200B2DB0A /* GREYAction.h in Headers */ = {isa = PBXBuildFile; fileRef = FD1001011C5B46C100B2DB0A /* GREYAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -280,8 +281,9 @@
 		7CFDF8E51DBBD5FC00CAADB3 /* GREYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GREYLogger.m; sourceTree = "<group>"; };
 		7CFDF8E61DBBD5FC00CAADB3 /* GREYObjectFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GREYObjectFormatter.h; sourceTree = "<group>"; };
 		7CFDF8E71DBBD5FC00CAADB3 /* GREYObjectFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GREYObjectFormatter.m; sourceTree = "<group>"; };
-		B60E68D420D7A7BD00F22F12 /* Crutch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Crutch.h; sourceTree = "<group>"; };
-		B60E68D520D7A7BD00F22F12 /* Crutch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Crutch.m; sourceTree = "<group>"; };
+		B60E68D420D7A7BD00F22F12 /* XCUIDevice+Crutch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCUIDevice+Crutch.h"; sourceTree = "<group>"; };
+		B60E68D520D7A7BD00F22F12 /* XCUIDevice+Crutch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XCUIDevice+Crutch.m"; sourceTree = "<group>"; };
+		B60E68D820D7AA7900F22F12 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D210ED8B1E6F47D100978B9E /* GREYMultiFingerSwipeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GREYMultiFingerSwipeAction.h; sourceTree = "<group>"; };
 		D210ED8C1E6F47D100978B9E /* GREYMultiFingerSwipeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GREYMultiFingerSwipeAction.m; sourceTree = "<group>"; };
 		FD06C66B1BECAD8B009032A5 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -469,6 +471,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60E68D920D7AA7900F22F12 /* XCTest.framework in Frameworks */,
 				61CBDE801D4CD85200206BF7 /* CoreData.framework in Frameworks */,
 				FD10025B1C5B473400B2DB0A /* OCHamcrest.framework in Frameworks */,
 				FD10025A1C5B472C00B2DB0A /* IOKit.framework in Frameworks */,
@@ -499,6 +502,7 @@
 		FD06C6751BECAE6A009032A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B60E68D820D7AA7900F22F12 /* XCTest.framework */,
 				61CBDE7F1D4CD85200206BF7 /* CoreData.framework */,
 				FD1002591C5B472C00B2DB0A /* IOKit.framework */,
 				FD6160601BF2C97800722593 /* OCHamcrest.framework */,
@@ -695,8 +699,8 @@
 			children = (
 				61FC0A051CD939C30081BDAA /* GREYAutomationSetup.h */,
 				FDCB29841E2465A20001557E /* GREYElementInteraction+Internal.h */,
-				B60E68D420D7A7BD00F22F12 /* Crutch.h */,
-				B60E68D520D7A7BD00F22F12 /* Crutch.m */,
+				B60E68D420D7A7BD00F22F12 /* XCUIDevice+Crutch.h */,
+				B60E68D520D7A7BD00F22F12 /* XCUIDevice+Crutch.m */,
 				61FC0A061CD939C30081BDAA /* GREYAutomationSetup.m */,
 				FD1001681C5B46C200B2DB0A /* GREYElementFinder.h */,
 				FD1001691C5B46C200B2DB0A /* GREYElementFinder.m */,
@@ -882,7 +886,7 @@
 				FD6D0B981C6D49400001EA75 /* GREYBaseAction.h in Headers */,
 				FD1001B11C5B46C200B2DB0A /* GREYActionBlock.h in Headers */,
 				FD1001BD1C5B46C200B2DB0A /* GREYScrollActionError.h in Headers */,
-				B60E68D620D7A7BD00F22F12 /* Crutch.h in Headers */,
+				B60E68D620D7A7BD00F22F12 /* XCUIDevice+Crutch.h in Headers */,
 				FD1001F91C5B46C200B2DB0A /* GREYIdlingResource.h in Headers */,
 				FD1001FA1C5B46C200B2DB0A /* GREYAssertion.h in Headers */,
 				FD1001FE1C5B46C200B2DB0A /* GREYAssertions.h in Headers */,
@@ -1092,7 +1096,7 @@
 				FD1001EE1C5B46C200B2DB0A /* UITouch+GREYAdditions.m in Sources */,
 				7CCBEBA71DCD2F0500CC01B8 /* GREYError.m in Sources */,
 				FD1002061C5B46C200B2DB0A /* GREYConstants.m in Sources */,
-				B60E68D720D7A7BD00F22F12 /* Crutch.m in Sources */,
+				B60E68D720D7A7BD00F22F12 /* XCUIDevice+Crutch.m in Sources */,
 				FD10021B1C5B46C200B2DB0A /* GREYCAAnimationDelegate.m in Sources */,
 				FD1001B41C5B46C200B2DB0A /* GREYActions.m in Sources */,
 				FD6D0B991C6D49400001EA75 /* GREYBaseAction.m in Sources */,
